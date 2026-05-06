@@ -1,0 +1,307 @@
+---
+// Falling Out Show - Main Page
+const episodes = [
+  {
+    title: "Episode 1",
+    youtubeId: "OgCbB0rcAkE",
+    link: "https://youtu.be/8wXft4uNmPA"
+  },
+  {
+    title: "Episode 2", 
+    youtubeId: "YKNYiLREjfs",
+    link: "https://youtu.be/pFmzMylBUT4"
+  },
+  {
+    title: "Episode 3",
+    youtubeId: "u-xVdSYCHX4",
+    link: "https://youtu.be/Gi1WHeSQ388"
+  }
+];
+
+const credits = [
+  { role: "Writer and Director", name: "Alex Baro-Cayetano" },
+  { role: "Fatima", name: "Susu Ahmed" },
+  { role: "Emal", name: "Emal Saifi" },
+  { role: "Zero", name: "Bear Winter-Perreau" },
+  { role: "Mike", name: "Kimani Campbell" },
+  { role: "Jamie", name: "Ekow Otoo" },
+  { role: "Sophie", name: "Helen Thomas" },
+  { role: "Henry", name: "Yinka Olabode" },
+  { role: "Stormzy", name: "Jamie Bozonga" },
+  { role: "Neighbour Steve", name: "Brock Hutton" },
+  { role: "Dead woman", name: "Philippine Bouchez" },
+  { role: "Croydon survivor", name: "Josh Herring" },
+  { role: "Stunts", name: "Axel Nu" },
+  { role: "Stunts", name: "Michael Worwood" },
+  { role: "Stunt Department Manager", name: "Jean-Paul Ly" },
+  { role: "DOP", name: "Anand Singh" },
+  { role: "2nd Cam Op / Gaffer", name: "Jay Whylie" },
+  { role: "First AD", name: "Greg Furber" },
+  { role: "Second AD", name: "Daniel Oluwasayo Olabode" },
+  { role: "Sound Recordist", name: "Rufus Ambler" },
+  { role: "Costume Design", name: "Elisa Ghysels" },
+  { role: "Prosthetics", name: "Chelsea Murphy" },
+  { role: "Catering", name: "Hannah Robinson" },
+  { role: "Runner", name: "George Jamieson" },
+  { role: "VFX Compositor", name: "Eddy Idris" },
+  { role: "VFX Compositor", name: "Chris Fryer" },
+  { role: "VFX Compositor", name: "Alexandre Prod'homme" },
+  { role: "Roto Artist", name: "Nazmul Hossain Nahid" },
+  { role: "Grade", name: "Anand Singh" },
+  { role: "Sound Supervisor", name: "Nicola Itro" },
+  { role: "Script Editor", name: "James Saunders" },
+  { role: "Script Editor", name: "Peter Fellows" },
+  { role: "Script Editor", name: "Dan McGrath" },
+  { role: "Executive Producer", name: "Alex Baro-Cayetano" },
+  { role: "Executive Producer", name: "Peter Fellows" },
+];
+
+const galleryImages = [
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/8595a171-44b5-4b91-abe6-72cf34323729_rw_1200.jpeg?h=508cb55e0a21a3fe419184de52227571", portrait: true },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/002c1f04-3234-4ac3-8135-8b0fe419c9f0_rw_1200.jpeg?h=7127c56321f7ae0af665bb242bcc8b33", portrait: false },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/7ad50f4b-a487-46a5-b3de-6d56fe67e736_rw_1200.jpeg?h=39ffdbb120d87a823c5031affc33348c", portrait: false },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/6231b998-1fa2-46a3-9a2e-db1ee170d11d_rw_1200.jpeg?h=1c04c164b8a42bc31286be8732af1ab7", portrait: false },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/48abe908-b0f3-4a3d-81db-0f6537333b36_rw_1200.jpeg?h=71eeb632d6fabc1c0c4fa0f5abae624f", portrait: false },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/a38044c3-331e-4b00-bb95-ee886daae094_rw_1200.jpeg?h=52568f010e75b81d467e0fd952822c99", portrait: false },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/c4d68873-1d38-41e6-8909-bea5e86fb1fd_rw_1200.jpeg?h=21775690f5c578e2c0336a7461ec59d7", portrait: false },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/be515a76-9e95-49e7-805e-33238d3b131d_rw_1200.jpeg?h=78cdb0ba78551ca448f08f19937e2bba", portrait: false },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/c3e0d315-f084-43ea-97f6-67afbfdc6204_rw_1200.jpeg?h=1a9be68fe069f5d566247dd3a181d7b3", portrait: false },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/8616341f-c5df-45f7-a831-ed7759688d62_rw_1200.jpeg?h=c5d01d13038f99b7ff0caea1f265d061", portrait: false },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/bf851dcb-5236-44c9-b63d-97e542302da2_rw_1200.jpeg?h=0385f9726312c92c153376254e3e7bb3", portrait: true },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/53cae1b8-888e-4071-9ac6-ba4d7a58b3ba_rw_1200.jpeg?h=64a61978e9fb52859ee63a444ddbed41", portrait: true },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/083ea9e9-a006-4e3a-bcb0-eb39096dacdd_rw_1200.jpeg?h=54b9e4710399487c69f8359941b02255", portrait: true },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/6ea93925-cec0-493a-9c7e-d026908d5666_rw_1200.jpeg?h=3689acd16b99d36da951e96215817412", portrait: true },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/04dde405-2636-460e-a163-4a82e75c693b_rw_1200.jpeg?h=a91dece648357fc8dcd2d9221d56ca75", portrait: false },
+  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/873cecf1-dd9f-4a91-8693-1cb61923ae02_rw_1200.jpeg?h=60cae1736a1ee52895badc78b7d7064e", portrait: true },
+];
+---
+
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Falling Out Show" />
+    <meta property="og:image" content="https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/80c7ed14-eb94-4df5-a6e2-d26b9704a564_rwc_0x0x6000x3376x6000.jpg?h=8b52c1a0f678db866be4bf3566440838" />
+    <link rel="icon" href="https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/4331ec72-ccc1-4088-b944-5c3076d44f7b_carw_1x1x32.png?h=ce682483bf59d9fc96f2a12c35a6344d" />
+    <link rel="apple-touch-icon" href="https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/e2821117-4bda-4a85-9657-e1adbfc74099_carw_1x1x180.png?h=636efb21f75f30254284de6de8fc73f5" />
+    <title>Falling Out Show</title>
+  </head>
+  <body>
+    <main class="container">
+      <!-- Logo -->
+      <section class="logo-section">
+        <img 
+          src="https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/cb25ca9c-f8b3-4f9c-bc06-0fba53c666f9_rw_1920.png?h=2c53169db4b1045e9384710b5ec4e6ef" 
+          alt="Falling Out Show Logo"
+          class="logo"
+        />
+      </section>
+
+      <!-- Trailer Section -->
+      <section class="section">
+        <h2 class="section-title">TRAILER</h2>
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/i4CHVmHzMjY?si=wYI_P6ONO1NL-g5g" 
+            frameborder="0" 
+            allow="autoplay; picture-in-picture" 
+            allowfullscreen
+            title="Falling Out Show Trailer"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- Episodes Section -->
+      <section class="section">
+        <h2 class="section-title">EPISODES</h2>
+        {episodes.map((episode, index) => (
+          <div class="episode">
+            <div class="video-container">
+              <iframe 
+                src={`https://www.youtube.com/embed/${episode.youtubeId}`}
+                frameborder="0" 
+                allow="autoplay; picture-in-picture" 
+                allowfullscreen
+                title={episode.title}
+              ></iframe>
+            </div>
+            <p class="episode-link">
+              {episode.title.toUpperCase()} LINK: <a href={episode.link}>{episode.link}</a>
+            </p>
+          </div>
+        ))}
+      </section>
+
+      <!-- Credits Section -->
+      <section class="section credits-section">
+        <h2 class="section-title">CREDITS</h2>
+        <div class="credits-list">
+          {credits.map((credit) => (
+            <p class="credit-item">{credit.name} - {credit.role}</p>
+          ))}
+          <p class="credit-item">ADDITIONAL VOICES - ADAM NIELD & JOSH HERRING</p>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="section gallery-section">
+        <div class="gallery">
+          {galleryImages.map((image, index) => (
+            <div class={`gallery-item ${image.portrait ? 'portrait' : 'landscape'}`}>
+              <img 
+                src={image.src} 
+                alt={`Behind the scenes photo ${index + 1}`}
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.4;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .logo-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .section {
+    margin-bottom: 60px;
+  }
+
+  .section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 688px;
+    margin: 0 auto 20px;
+    padding-bottom: 53.05%;
+    height: 0;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .episode {
+    margin-bottom: 40px;
+  }
+
+  .episode-link {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .episode-link a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .episode-link a:hover {
+    text-decoration: underline;
+  }
+
+  .credits-section {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .credits-list {
+    line-height: 1.8;
+  }
+
+  .credit-item {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .gallery-item {
+    overflow: hidden;
+  }
+
+  .gallery-item.landscape {
+    flex: 1 1 calc(33.333% - 10px);
+    max-width: calc(33.333% - 10px);
+  }
+
+  .gallery-item.portrait {
+    flex: 1 1 calc(20% - 10px);
+    max-width: calc(20% - 10px);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.02);
+  }
+
+  @media (max-width: 768px) {
+    .gallery-item.landscape,
+    .gallery-item.portrait {
+      flex: 1 1 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+    }
+
+    .video-container {
+      padding-bottom: 56.25%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery-item.landscape,
+    .gallery-item.portrait {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+</style>
