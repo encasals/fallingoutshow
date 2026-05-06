@@ -202,11 +202,12 @@ const largeImages = await Promise.all(
         <h2 class="section-title">TRAILER</h2>
         <div class="video-container">
           <iframe 
-            src="https://www.youtube.com/embed/i4CHVmHzMjY?si=wYI_P6ONO1NL-g5g" 
+            src="https://www.youtube-nocookie.com/embed/i4CHVmHzMjY?si=wYI_P6ONO1NL-g5g" 
             frameborder="0" 
             allow="autoplay; picture-in-picture" 
             allowfullscreen
             title="Falling Out Show Trailer"
+            loading="lazy"
           ></iframe>
         </div>
       </section>
@@ -218,11 +219,12 @@ const largeImages = await Promise.all(
           <div class="episode">
             <div class="video-container">
               <iframe 
-                src={`https://www.youtube.com/embed/${episode.youtubeId}`}
+                src={`https://www.youtube-nocookie.com/embed/${episode.youtubeId}`}
                 frameborder="0" 
                 allow="autoplay; picture-in-picture" 
                 allowfullscreen
                 title={episode.title}
+                loading="lazy"
               ></iframe>
             </div>
             <p class="episode-link">
