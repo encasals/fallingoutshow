@@ -1,0 +1,6 @@
+# Robots.txt for Falling Out Show
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://fallingoutshow.vercel.app/sitemap.xml
