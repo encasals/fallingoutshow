@@ -1,5 +1,26 @@
 ---
 // Falling Out Show - Main Page
+import { Image } from 'astro:assets';
+
+// Import local images for optimization
+import logoImage from '../assets/images/logo.png';
+import gallery1 from '../assets/images/gallery/gallery-1.jpg';
+import gallery2 from '../assets/images/gallery/gallery-2.jpg';
+import gallery3 from '../assets/images/gallery/gallery-3.jpg';
+import gallery4 from '../assets/images/gallery/gallery-4.jpg';
+import gallery5 from '../assets/images/gallery/gallery-5.jpg';
+import gallery6 from '../assets/images/gallery/gallery-6.jpg';
+import gallery7 from '../assets/images/gallery/gallery-7.jpg';
+import gallery8 from '../assets/images/gallery/gallery-8.jpg';
+import gallery9 from '../assets/images/gallery/gallery-9.jpg';
+import gallery10 from '../assets/images/gallery/gallery-10.jpg';
+import gallery11 from '../assets/images/gallery/gallery-11.jpg';
+import gallery12 from '../assets/images/gallery/gallery-12.jpg';
+import gallery13 from '../assets/images/gallery/gallery-13.jpg';
+import gallery14 from '../assets/images/gallery/gallery-14.jpg';
+import gallery15 from '../assets/images/gallery/gallery-15.jpg';
+import gallery16 from '../assets/images/gallery/gallery-16.jpg';
+
 const episodes = [
   {
     title: "Episode 1",
@@ -57,22 +78,22 @@ const credits = [
 ];
 
 const galleryImages = [
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/8595a171-44b5-4b91-abe6-72cf34323729_rw_1200.jpeg?h=508cb55e0a21a3fe419184de52227571", portrait: true },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/002c1f04-3234-4ac3-8135-8b0fe419c9f0_rw_1200.jpeg?h=7127c56321f7ae0af665bb242bcc8b33", portrait: false },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/7ad50f4b-a487-46a5-b3de-6d56fe67e736_rw_1200.jpeg?h=39ffdbb120d87a823c5031affc33348c", portrait: false },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/6231b998-1fa2-46a3-9a2e-db1ee170d11d_rw_1200.jpeg?h=1c04c164b8a42bc31286be8732af1ab7", portrait: false },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/48abe908-b0f3-4a3d-81db-0f6537333b36_rw_1200.jpeg?h=71eeb632d6fabc1c0c4fa0f5abae624f", portrait: false },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/a38044c3-331e-4b00-bb95-ee886daae094_rw_1200.jpeg?h=52568f010e75b81d467e0fd952822c99", portrait: false },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/c4d68873-1d38-41e6-8909-bea5e86fb1fd_rw_1200.jpeg?h=21775690f5c578e2c0336a7461ec59d7", portrait: false },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/be515a76-9e95-49e7-805e-33238d3b131d_rw_1200.jpeg?h=78cdb0ba78551ca448f08f19937e2bba", portrait: false },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/c3e0d315-f084-43ea-97f6-67afbfdc6204_rw_1200.jpeg?h=1a9be68fe069f5d566247dd3a181d7b3", portrait: false },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/8616341f-c5df-45f7-a831-ed7759688d62_rw_1200.jpeg?h=c5d01d13038f99b7ff0caea1f265d061", portrait: false },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/bf851dcb-5236-44c9-b63d-97e542302da2_rw_1200.jpeg?h=0385f9726312c92c153376254e3e7bb3", portrait: true },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/53cae1b8-888e-4071-9ac6-ba4d7a58b3ba_rw_1200.jpeg?h=64a61978e9fb52859ee63a444ddbed41", portrait: true },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/083ea9e9-a006-4e3a-bcb0-eb39096dacdd_rw_1200.jpeg?h=54b9e4710399487c69f8359941b02255", portrait: true },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/6ea93925-cec0-493a-9c7e-d026908d5666_rw_1200.jpeg?h=3689acd16b99d36da951e96215817412", portrait: true },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/04dde405-2636-460e-a163-4a82e75c693b_rw_1200.jpeg?h=a91dece648357fc8dcd2d9221d56ca75", portrait: false },
-  { src: "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/873cecf1-dd9f-4a91-8693-1cb61923ae02_rw_1200.jpeg?h=60cae1736a1ee52895badc78b7d7064e", portrait: true },
+  { src: gallery1, portrait: true },
+  { src: gallery2, portrait: false },
+  { src: gallery3, portrait: false },
+  { src: gallery4, portrait: false },
+  { src: gallery5, portrait: false },
+  { src: gallery6, portrait: false },
+  { src: gallery7, portrait: false },
+  { src: gallery8, portrait: false },
+  { src: gallery9, portrait: false },
+  { src: gallery10, portrait: false },
+  { src: gallery11, portrait: true },
+  { src: gallery12, portrait: true },
+  { src: gallery13, portrait: true },
+  { src: gallery14, portrait: true },
+  { src: gallery15, portrait: false },
+  { src: gallery16, portrait: true },
 ];
 ---
 
@@ -95,7 +116,7 @@ const galleryImages = [
     <meta property="og:url" content="https://fallingoutshow.vercel.app/" />
     <meta property="og:title" content="Falling Out | Apocalypse Comedy Zombie Series" />
     <meta property="og:description" content="Watch Falling Out, a British apocalypse comedy zombie web series. Stream all 3 episodes free. Created by Alex Baro-Cayetano." />
-    <meta property="og:image" content="https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/80c7ed14-eb94-4df5-a6e2-d26b9704a564_rwc_0x0x6000x3376x6000.jpg?h=8b52c1a0f678db866be4bf3566440838" />
+    <meta property="og:image" content="https://fallingoutshow.vercel.app/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Falling Out Show" />
@@ -106,11 +127,11 @@ const galleryImages = [
     <meta name="twitter:url" content="https://fallingoutshow.vercel.app/" />
     <meta name="twitter:title" content="Falling Out | Apocalypse Comedy Zombie Series" />
     <meta name="twitter:description" content="Watch Falling Out, a British apocalypse comedy zombie web series. Stream all 3 episodes free. Created by Alex Baro-Cayetano." />
-    <meta name="twitter:image" content="https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/80c7ed14-eb94-4df5-a6e2-d26b9704a564_rwc_0x0x6000x3376x6000.jpg?h=8b52c1a0f678db866be4bf3566440838" />
+    <meta name="twitter:image" content="https://fallingoutshow.vercel.app/og-image.jpg" />
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/4331ec72-ccc1-4088-b944-5c3076d44f7b_carw_1x1x32.png?h=ce682483bf59d9fc96f2a12c35a6344d" />
-    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/e2821117-4bda-4a85-9657-e1adbfc74099_carw_1x1x180.png?h=636efb21f75f30254284de6de8fc73f5" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     
     <!-- Schema.org JSON-LD structured data -->
     <script type="application/ld+json">
@@ -139,7 +160,7 @@ const galleryImages = [
         { "@type": "Person", "name": "Helen Thomas" },
         { "@type": "Person", "name": "Yinka Olabode" }
       ],
-      "image": "https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/80c7ed14-eb94-4df5-a6e2-d26b9704a564_rwc_0x0x6000x3376x6000.jpg",
+      "image": "https://fallingoutshow.vercel.app/og-image.jpg",
       "url": "https://fallingoutshow.vercel.app/",
       "countryOfOrigin": {
         "@type": "Country",
@@ -152,10 +173,14 @@ const galleryImages = [
     <main class="container">
       <!-- Logo -->
       <section class="logo-section">
-        <img 
-          src="https://cdn.myportfolio.com/4f22ae2f-f331-4f4a-b152-c2dc84df9f9b/cb25ca9c-f8b3-4f9c-bc06-0fba53c666f9_rw_1920.png?h=2c53169db4b1045e9384710b5ec4e6ef" 
+        <Image 
+          src={logoImage}
           alt="Falling Out Show Logo"
           class="logo"
+          width={800}
+          format="webp"
+          quality={80}
+          loading="eager"
         />
       </section>
 
@@ -209,17 +234,38 @@ const galleryImages = [
       <section class="section gallery-section">
         <div class="gallery">
           {galleryImages.map((image, index) => (
-            <div class={`gallery-item ${image.portrait ? 'portrait' : 'landscape'}`}>
-              <img 
+            <div 
+              class={`gallery-item ${image.portrait ? 'portrait' : 'landscape'}`}
+              data-index={index}
+              role="button"
+              tabindex="0"
+              aria-label={`View behind the scenes photo ${index + 1}`}
+            >
+              <Image 
                 src={image.src} 
                 alt={`Behind the scenes photo ${index + 1}`}
+                width={image.portrait ? 300 : 400}
+                format="webp"
+                quality={75}
                 loading="lazy"
+                decoding="async"
               />
             </div>
           ))}
         </div>
       </section>
     </main>
+
+    <!-- Image Preview Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close preview">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">&#10095;</button>
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="" />
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -386,6 +432,127 @@ const galleryImages = [
     transform: scale(1.02);
   }
 
+  .gallery-item {
+    cursor: pointer;
+  }
+
+  .gallery-item:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+
+  /* Lightbox Styles */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .lightbox.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lightbox-content img {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+
+  .lightbox-close:hover {
+    transform: scale(1.1);
+  }
+
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 20px 15px;
+    z-index: 1001;
+    transition: background 0.2s ease;
+    border-radius: 4px;
+  }
+
+  .lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .lightbox-prev {
+    left: 20px;
+  }
+
+  .lightbox-next {
+    right: 20px;
+  }
+
+  .lightbox-counter {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 768px) {
+    .lightbox-nav {
+      padding: 15px 10px;
+      font-size: 24px;
+    }
+
+    .lightbox-prev {
+      left: 10px;
+    }
+
+    .lightbox-next {
+      right: 10px;
+    }
+
+    .lightbox-close {
+      top: 10px;
+      right: 10px;
+      font-size: 32px;
+    }
+  }
+
   .footer {
     text-align: center;
     padding: 30px 20px;
@@ -420,3 +587,128 @@ const galleryImages = [
     }
   }
 </style>
+
+<script>
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox') as HTMLElement;
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const lightboxCounter = document.getElementById('lightbox-counter') as HTMLElement;
+  const closeBtn = document.getElementById('lightbox-close') as HTMLButtonElement;
+  const prevBtn = document.getElementById('lightbox-prev') as HTMLButtonElement;
+  const nextBtn = document.getElementById('lightbox-next') as HTMLButtonElement;
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  
+  let currentIndex = 0;
+  const totalImages = galleryItems.length;
+
+  // Get full-size image URLs from the gallery
+  function getImageSrc(index: number): string {
+    const img = galleryItems[index].querySelector('img');
+    return img?.src || '';
+  }
+
+  function getImageAlt(index: number): string {
+    const img = galleryItems[index].querySelector('img');
+    return img?.alt || `Photo ${index + 1}`;
+  }
+
+  function openLightbox(index: number): void {
+    currentIndex = index;
+    updateLightboxImage();
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeLightbox(): void {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    // Return focus to the gallery item
+    (galleryItems[currentIndex] as HTMLElement).focus();
+  }
+
+  function updateLightboxImage(): void {
+    lightboxImg.src = getImageSrc(currentIndex);
+    lightboxImg.alt = getImageAlt(currentIndex);
+    lightboxCounter.textContent = `${currentIndex + 1} / ${totalImages}`;
+  }
+
+  function showPrev(): void {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    updateLightboxImage();
+  }
+
+  function showNext(): void {
+    currentIndex = (currentIndex + 1) % totalImages;
+    updateLightboxImage();
+  }
+
+  // Event listeners for gallery items
+  galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => openLightbox(index));
+    item.addEventListener('keydown', (e: Event) => {
+      const keyEvent = e as KeyboardEvent;
+      if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
+        e.preventDefault();
+        openLightbox(index);
+      }
+    });
+  });
+
+  // Event listeners for lightbox controls
+  closeBtn.addEventListener('click', closeLightbox);
+  prevBtn.addEventListener('click', showPrev);
+  nextBtn.addEventListener('click', showNext);
+
+  // Close on backdrop click
+  lightbox.addEventListener('click', (e: Event) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (!lightbox.classList.contains('active')) return;
+    
+    switch (e.key) {
+      case 'Escape':
+        closeLightbox();
+        break;
+      case 'ArrowLeft':
+        showPrev();
+        break;
+      case 'ArrowRight':
+        showNext();
+        break;
+    }
+  });
+
+  // Touch swipe support for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightbox.addEventListener('touchstart', (e: TouchEvent) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', (e: TouchEvent) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe(): void {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        showNext(); // Swipe left = next
+      } else {
+        showPrev(); // Swipe right = prev
+      }
+    }
+  }
+</script>
